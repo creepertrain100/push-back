@@ -106,22 +106,22 @@ async fn main(peripherals: Peripherals) {
     // let partner_controller = peripherals.partner_controller;
 
     let left = [
-        Motor::new(peripherals.port_18, Gearset::Blue, Direction::Reverse),
-        Motor::new(peripherals.port_19, Gearset::Blue, Direction::Reverse),
-        Motor::new(peripherals.port_20, Gearset::Blue, Direction::Reverse),
+        Motor::new(peripherals.port_1, Gearset::Blue, Direction::Reverse),
+        Motor::new(peripherals.port_2, Gearset::Blue, Direction::Reverse),
+        Motor::new(peripherals.port_10, Gearset::Blue, Direction::Reverse),
     ];
     let right = [
-        Motor::new(peripherals.port_8, Gearset::Blue, Direction::Forward),
+        Motor::new(peripherals.port_19, Gearset::Blue, Direction::Forward),
         Motor::new(peripherals.port_9, Gearset::Blue, Direction::Forward),
-        Motor::new(peripherals.port_10, Gearset::Blue, Direction::Forward),
+        Motor::new(peripherals.port_8, Gearset::Blue, Direction::Forward),
     ];
 
     let intake = TernaryMotor::new(
-        Motor::new(peripherals.port_3, Gearset::Green, Direction::Forward),
+        Motor::new(peripherals.port_20, Gearset::Green, Direction::Forward),
         MAX_WHEEL,
     );
     let outake = TernaryMotor::new(
-        Motor::new(peripherals.port_2, Gearset::Green, Direction::Reverse),
+        Motor::new(peripherals.port_12, Gearset::Green, Direction::Reverse),
         MAX_WHEEL,
     );
 
